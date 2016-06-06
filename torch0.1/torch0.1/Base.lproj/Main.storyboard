@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Torch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="torch0_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,19 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqL-aM-F8t">
-                                <rect key="frame" x="256" y="200" width="89" height="200"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWJ-GP-Efq">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="torchoff"/>
                                 <connections>
-                                    <action selector="torchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uRO-dT-acx"/>
+                                    <action selector="torchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TiM-wj-I3I"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oqL-aM-F8t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="V5D-ZK-OEY"/>
-                            <constraint firstItem="oqL-aM-F8t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8e-0V-Xwt"/>
+                            <constraint firstItem="wWJ-GP-Efq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGo-H9-YlA"/>
+                            <constraint firstItem="wWJ-GP-Efq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="alP-ef-qoA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="wWJ-GP-Efq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="aGo-H9-YlA"/>
+                                <exclude reference="alP-ef-qoA"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="wWJ-GP-Efq"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="aGo-H9-YlA"/>
+                                <include reference="alP-ef-qoA"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
