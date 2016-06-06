@@ -17,35 +17,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWJ-GP-Efq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qp6-aV-yU6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" image="torchoff"/>
+                                <variation key="widthClass=compact"/>
                                 <connections>
-                                    <action selector="torchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TiM-wj-I3I"/>
+                                    <action selector="torchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VlX-aZ-oJL"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wWJ-GP-Efq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aGo-H9-YlA"/>
-                            <constraint firstItem="wWJ-GP-Efq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="alP-ef-qoA"/>
+                            <constraint firstItem="qp6-aV-yU6" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QLL-rx-8R0"/>
+                            <constraint firstItem="qp6-aV-yU6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pYg-ve-PNO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="wWJ-GP-Efq"/>
+                                <exclude reference="qp6-aV-yU6"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="aGo-H9-YlA"/>
-                                <exclude reference="alP-ef-qoA"/>
+                                <exclude reference="QLL-rx-8R0"/>
+                                <exclude reference="pYg-ve-PNO"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="wWJ-GP-Efq"/>
+                                <include reference="qp6-aV-yU6"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="aGo-H9-YlA"/>
-                                <include reference="alP-ef-qoA"/>
+                                <include reference="QLL-rx-8R0"/>
+                                <include reference="pYg-ve-PNO"/>
                             </mask>
                         </variation>
                     </view>

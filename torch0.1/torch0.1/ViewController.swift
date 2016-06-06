@@ -10,6 +10,10 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+	
+	let imageon = "torchon.jpg"
+	let imageoff = "torchoff.jpg"
+	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -22,17 +26,31 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func torchButton(sender: AnyObject) {
-		let device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
+		var device = AVCaptureDevice.defaultDeviceWithMediaType(AVMediaTypeVideo)
 		
-		if device.hasTorch{
-			do{
+		if (device.hasTorch) {
+			do {
 				try device.lockForConfiguration()
-				device.torchMode = device.torchMode == AVCaptureTorchMode.On ? .Off : .On
+				if (device.torchMode == AVCaptureTorchMode.On) {
+					device.torchMode = AVCaptureTorchMode.Off
+				} else {
+					try device.setTorchModeOnWithLevel(1.0)
+				}
 				device.unlockForConfiguration()
-			} catch{
+			} catch {
 				print(error)
 			}
 		}
+//		if device.hasTorch{
+//			do{
+//				try device.lockForConfiguration()
+//				device.torchMode = device.torchMode == AVCaptureTorchMode.On ? .Off : .On
+//				device.torchMode = UIImage(named: "torchon")
+//				device.unlockForConfiguration()
+//			} catch{
+//				print(error)
+//			}
+//		}
 	}
 }
 
